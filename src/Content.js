@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Clock from "./Clock";
+import Todo from "./Todo";
 
 const Content = () => {
     return (
       
       <Container>
         <Clock />
+        <Todo />
       </Container>
       );
 };
@@ -18,6 +20,10 @@ const Container = styled.div`
   width: 500px;
   height: calc(100% - 33px);
   color: white;
+  overflow-y: auto;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export default Content;
